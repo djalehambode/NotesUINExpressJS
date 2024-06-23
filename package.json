@@ -1,0 +1,25 @@
+{
+  "name": "myfirstplayapp",
+  "version": "1.0.0",
+  "description": "My first express app...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djalehambode/myFirstExpressApp.git"
+  },
+  "author": "h",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djalehambode/myFirstExpressApp/issues"
+  },
+  "homepage": "https://github.com/djalehambode/myFirstExpressApp#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
