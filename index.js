@@ -8,7 +8,7 @@ const app = express();
 
 // Configuration du moteur de template EJS
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/vues');
 
 // Configuration du middleware Body Parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,8 +23,8 @@ const sequelize = new Sequelize({
 });
 
 // Import des modèles
-const Etudiant = require('./models/etudiant')(sequelize, DataTypes);
-const Note = require('./models/note')(sequelize, DataTypes);
+const Etudiant = require('./modeles/etudiant')(sequelize, DataTypes);
+const Note = require('./modeles/note')(sequelize, DataTypes);
 
 // Synchronisation des modèles avec la base de données
 sequelize.sync()
