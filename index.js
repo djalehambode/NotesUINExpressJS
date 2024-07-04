@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Sequelize, DataTypes } = require('sequelize');
+const port = 3000;
 
 // Création de l'application Express
 const app = express();
@@ -66,7 +67,6 @@ app.post('/note', async (req, res) => {
 });
 
 // Démarrer le serveur
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log('Serveur démarré sur le port ${PORT}');
 });
