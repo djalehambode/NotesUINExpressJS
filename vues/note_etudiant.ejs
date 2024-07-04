@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisie de la note</title>
+</head>
+<body>
+    <h1>Saisie de la note</h1>
+    <form action="/note" method="POST">
+        <input type="hidden" name="etudiantId" value="<%= etudiant.id %>">
+        <label for="note">Note :</label>
+        <input type="text" id="note" name="note">
+        <button type="submit">Enregistrer</button>
+    </form>
+</body>
+</html>
