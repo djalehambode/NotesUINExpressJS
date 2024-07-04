@@ -16,9 +16,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const sequelize = new Sequelize({
   dialect: 'mysql',
   host: 'localhost',
-  username: 'votre_utilisateur',
-  password: 'votre_mot_de_passe',
-  database: 'nom_de_votre_base_de_données'
+  username: 'h',
+  password: '',
+  database: 'dbNotesUINExpressJS'
 });
 
 // Import des modèles
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
   res.render('accueil');
 });
 
-app.get('/liste', async (req, res) => {
+app.get('/etudiants', async (req, res) => {
   try {
     const etudiants = await Etudiant.findAll();
     res.render('liste', { etudiants });
@@ -49,7 +49,7 @@ app.get('/liste', async (req, res) => {
   }
 });
 
-app.get('/note/:etudiantId', async (req, res) => {
+app.get('/note_etudiant/:etudiantId', async (req, res) => {
   const etudiantId = req.params.etudiantId;
   res.render('note', { etudiantId });
 });
@@ -68,5 +68,5 @@ app.post('/note', async (req, res) => {
 // Démarrer le serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Serveur démarré sur le port ${PORT}`);
+  console.log('Serveur démarré sur le port ${PORT}');
 });
